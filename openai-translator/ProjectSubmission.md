@@ -14,19 +14,19 @@
 
 ![translated-to-german](homeworkimages/translated-german.png)
 
-### 批处理pdf
+### 3. 批处理pdf
 
 UI界面上支持一次upload 多个document的功能。但是每个document是按顺序处理，目前没有使用 parallel 的方式发请求给openai。
 
 ![multiplepdf](homeworkimages/multiplepdf.png)
 
-### 保持原始文档布局和Table样式输出
+### 4. 保持原始文档布局和Table样式输出
 
 在输出的interface component上按照pdf parser生成order输出翻译结果。保持了Table的格式，按照HTML code实现。
 
 ![table](homeworkimages/table.png)
 
-### Prompt例子
+### 5. Prompt例子
 
 ```Python
 task = """
