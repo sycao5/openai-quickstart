@@ -59,3 +59,14 @@ translation = response.choices[0].message['content'].strip()
 ## 代码地址
 
 [MyCodeRepo in Github](https://github.com/sycao5/openai-quickstart/tree/yang-project1/openai-translator)
+
+Run command from CLI:
+```dotnetcli
+python ai_translator/main.py  --model_type OpenAIModel  --openai_api_key <your-key>
+``````
+
+Then, it will open a local url, please click link and the ui will be opened in the explorer.
+```
+Running on local URL:  http://127.0.0.1:7861
+To create a public link, set `share=True` in `launch()`.
+``````
