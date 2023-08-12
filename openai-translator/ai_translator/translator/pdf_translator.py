@@ -11,12 +11,11 @@ class PDFTranslator:
         self.pdf_parser = PDFParser()
         self.writer = Writer()
 
-    def translate_pdf(self, pdf_file_path: str, file_format: str = 'PDF', target_language: str = '中文', output_file_path: str = None, pages: Optional[int] = 0):
-        print('000000')
+    def translate_pdf(self, pdf_file_path: str, file_format: str = 'PDF', target_language: str = '中文', output_file_path: str = None, pages: Optional[int] = 1):
+        print(pages)
         self.book = self.pdf_parser.parse_pdf(pdf_file_path, pages)
         print('111111')
-        print(len(self.book.pages))
-
+        
         dict = {}
         for page_idx, page in enumerate(self.book.pages):
             for content_idx, content in enumerate(page.contents):

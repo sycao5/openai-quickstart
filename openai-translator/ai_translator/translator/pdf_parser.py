@@ -13,13 +13,15 @@ class PDFParser:
         book = Book(pdf_file_path)
 
         with pdfplumber.open(pdf_file_path) as pdf:
-            if pages is not None and pages > len(pdf.pages):
-                raise PageOutOfRangeException(len(pdf.pages), pages)
+            # if pages is not None:
+            #     raise PageOutOfRangeException(len(pdf.pages), pages)
 
             if pages is None:
                 pages_to_parse = pdf.pages
-            else:
+            elif pages < len(pdf.pages):
                 pages_to_parse = pdf.pages[:pages]
+            else:
+                pages_to_parse = pdf.pages
 
             for pdf_page in pages_to_parse:
                 page = Page()

@@ -16,11 +16,21 @@ class OpenAIModel(Model):
         while attempts < 3:
             try:
                 if self.model == "gpt-3.5-turbo":
+                    task = """
+                            TASK: Do the following steps:
+                            1. correct spelling and grammatical mistakes of the text.
+                            2. detect the language of the text.
+                            3. Do not interpret or change the text. The result should be a straigth translation to the text.
+                            4. compose the translated text in a style appropriate for an old man and a teenager."
+                           """
+                    messages = [
+                        {"role": "system", "content": "You are an assistant that translates text."},
+                        {"role": "assistant", "content": task},
+                        {"role": "user", "content": prompt}
+                    ]
                     response = openai.ChatCompletion.create(
                         model=self.model,
-                        messages=[
-                            {"role": "user", "content": prompt}
-                        ]
+                        messages=messages
                     )
                     translation = response.choices[0].message['content'].strip()
                 else:
@@ -49,3 +59,6 @@ class OpenAIModel(Model):
             except Exception as e:
                 raise Exception(f"发生了未知错误：{e}")
         return "", False
+
+    def make_text_prompt(self, text: str, target_language: str) -> str:
+        return f"翻译为{target_language}: {text}"
