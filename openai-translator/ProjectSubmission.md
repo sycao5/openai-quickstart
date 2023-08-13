@@ -10,9 +10,21 @@
 
 ### 2. 翻译为其他语言
 
-下面的截图记录了把 test.pdf 和 老人与海.pdf翻译成德语。
+- 下面的截图记录了把 test.pdf 和 老人与海.pdf翻译成中文。
+
+![translated-to-chinese](homeworkimages/translated-chinese.png)
+
+- 下面的截图记录了把 test.pdf 和 老人与海.pdf翻译成繁体中文。
+
+![translated-to-chinese](homeworkimages/translated-traditional-chinese.png)
+
+- 下面的截图记录了把 test.pdf 和 老人与海.pdf翻译成德语。
 
 ![translated-to-german](homeworkimages/translated-german.png)
+
+- 下面的截图记录了把 test.pdf 和 老人与海.pdf翻译成印度语。
+
+![translated-to-german](homeworkimages/translated-hindi.png)
 
 ### 3. 批处理pdf
 
@@ -28,6 +40,8 @@ UI界面上支持一次upload 多个document的功能。但是每个document是�
 
 ### 5. Prompt例子
 
+- Basic prompt 1
+  
 ```Python
 task = """
         TASK: Do the following steps:
@@ -41,12 +55,19 @@ messages = [
     {"role": "assistant", "content": task},
     {"role": "user", "content": prompt}
 ]
-response = openai.ChatCompletion.create(
-    model=self.model,
-    messages=messages
-)
-translation = response.choices[0].message['content'].strip()
+
+翻译为{target_language}: {text}
 ```
+
+![translated-to-chinese](homeworkimages/prompt1-output.png)
+
+- Basic prompt 2
+
+我使用了这样的prompt,定位为精通中文翻译，从结果来看，翻译的更为地道。
+
+"As a highly proficient chinese translator, translate the following English text  {text} to {target_language}:"
+
+![translated-to-chinese](homeworkimages/prompt2-output.png)
 
 ## 学习心得
 
@@ -61,7 +82,7 @@ translation = response.choices[0].message['content'].strip()
 [MyCodeRepo in Github](https://github.com/sycao5/openai-quickstart/tree/yang-project1/openai-translator)
 
 Run command from CLI:
-```dotnetcli
+```python
 python ai_translator/main.py  --model_type OpenAIModel  --openai_api_key <your-key>
 ``````
 
