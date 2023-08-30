@@ -29,7 +29,8 @@ To begin, we must install the prerequisite libraries that we will be using in th
 4. Creating a Vector Store and Querying
 5. Initializing the Conversational Agent
 6. Using the Conversational Agent
-   
+
+-------
 1. 构建知识库
 2. 初始化嵌入模型和向量数据库
 3. 创建索引
