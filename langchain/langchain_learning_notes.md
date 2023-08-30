@@ -37,4 +37,9 @@ To begin, we must install the prerequisite libraries that we will be using in th
 5. 初始化对话代理
 6. 使用对话代理
 
+我的基于网上的一个教程。
 https://github.com/pinecone-io/examples/blob/master/learn/generation/langchain/handbook/08-langchain-retrieval-agent.ipynb
+
+我的输出在这里：https://github.com/sycao5/openai-quickstart/blob/yang-lanchain/langchain/08-langchain-retrieval-agent.ipynb
+
+今天还会仔细看
