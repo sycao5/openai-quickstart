@@ -5,7 +5,7 @@
 ![translator-v2-gradio](./homework-images/translatorv2-demo.png)
 ![translatorv2-outpputs](./homework-images/translatorv2-outputs.png)
 
-[可下载文件夹：](https://github.com/sycao5/openai-quickstart/tree/yang-translator-v2/openai-translator/outputs) 里面包含了3种风格的翻译文件。
+[可下载文件夹：](https://github.com/sycao5/openai-quickstart/tree/yang-translator-v2/langchain/openai-translator/ai_translator/outputs) 里面包含了3种风格的翻译文件。
 
 ## 作业2：扩展销售机器人（sales_chatbot）项目，应用于不同的销售场景，如：电器
 
