@@ -5,8 +5,8 @@ from translator.translation_chain import TranslationChain
 from utils import LOG
 
 class PDFTranslator:
-    def __init__(self, model_name: str):
-        self.translate_chain = TranslationChain(model_name)
+    def __init__(self, model_name: str, openai_api_key: str):
+        self.translate_chain = TranslationChain(model_name, openai_api_key)
         self.pdf_parser = PDFParser()
         self.writer = Writer()
 
@@ -15,6 +15,7 @@ class PDFTranslator:
                     output_file_format: str = 'markdown',
                     source_language: str = "English",
                     target_language: str = 'Chinese',
+                    style: str = None,
                     pages: Optional[int] = None):
         
         self.book = self.pdf_parser.parse_pdf(input_file, pages)
@@ -22,7 +23,7 @@ class PDFTranslator:
         for page_idx, page in enumerate(self.book.pages):
             for content_idx, content in enumerate(page.contents):
                 # Translate content.original
-                translation, status = self.translate_chain.run(content, source_language, target_language)
+                translation, status = self.translate_chain.run(content, source_language, target_language, style)
                 # Update the content in self.book.pages directly
                 self.book.pages[page_idx].contents[content_idx].set_translation(translation, status)
         

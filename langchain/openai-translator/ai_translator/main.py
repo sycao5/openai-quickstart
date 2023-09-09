@@ -16,5 +16,5 @@ if __name__ == "__main__":
     config.initialize(args)    
 
     # 实例化 PDFTranslator 类，并调用 translate_pdf() 方法
-    translator = PDFTranslator(config.model_name)
+    translator = PDFTranslator(config.model_name, openai_api_key=config.openai_api_key)
     translator.translate_pdf(config.input_file, config.output_file_format, pages=None)
