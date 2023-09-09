@@ -6,6 +6,7 @@
 ## 支持用户输入的 prompt和风格化翻译：新闻稿，莎士比亚，海明威等不同的作家风格。
 ![translatorv2-outpputs](./homework-images/translatorv2-outputs.png)
 
+[可下载文件夹：](https://github.com/sycao5/openai-quickstart/tree/yang-translator-v2/openai-translator/outputs)
 
 # 作业2：扩展销售机器人（sales_chatbot）项目，应用于不同的销售场景，如：电器
 
@@ -24,4 +25,4 @@
 
 ## 2. 销售机器人从 db和大模型来找答案
 
-[电视冰箱销售的notebook](https://github.com/sycao5/openai-quickstart/blob/yang-translator-v2/langchain/sales_chatbot/sales_electrons.ipynb）
+[电视冰箱销售的notebook](https://github.com/sycao5/openai-quickstart/blob/yang-translator-v2/langchain/sales_chatbot/sales_electrons.ipynb)
