@@ -116,7 +116,8 @@
 
 ### 总结和问题
 
-这一次的大作业使用了langchain和autogpt的方法来自动的生成prompt。在解决问题的过程中，我遇到下面2个问题：
+这一次的大作业使用了langchain和autogpt的方法来自动的生成prompt。在解决问题的过程中，我遇到下面3个问题：
 1. 在openai-translator 的作业里面，使用prompt template翻译的时候，有的request没有拿到结果；对比使用api call,每次request 都会有translated text。
 2. 在autogpt-gradio的作业里面，如何把search result 输出到output interface里面，而不是把最后面的那个tool "Finish"的执行结果输出来。
-   
+3. autogpt 的实验里有的query的执行没有结束条件控制；有时执行过短并没有找到答案。
+   希望老师能指点一下。
