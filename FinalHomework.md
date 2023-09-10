@@ -33,7 +33,7 @@
 
 - 2. 销售机器人从db和大模型来找答案
 
-        [电视冰箱销售的notebook](https://github.com/sycao5/openai-quickstart/blob/yang-translator-v2/langchain/sales_chatbot/sales_electrons.ipynb)
+        [代码 电视冰箱销售的notebook](https://github.com/sycao5/openai-quickstart/blob/yang-translator-v2/langchain/sales_chatbot/sales_electrons.ipynb)
         
 
 ### 作业3：实现 LangChain 版本的 AutoGPT 项目的图形化界面
