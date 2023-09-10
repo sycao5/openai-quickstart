@@ -1,10 +1,10 @@
-Weather Report for San Francisco
+Weather Report for Beijing, China
 
-Date: Saturday
+Date: Sunday
+Temperature: 79°F
 Weather: Partly cloudy
-Temperature: 68°F
-Precipitation: 0%
-Humidity: 73%
-Wind: 16 mph
+Precipitation: 10%
+Humidity: 78%
+Wind: 5 mph
 
-Please note that this report is based on the latest available information and may be subject to change.
+Have a great day!

@@ -1,18 +1,18 @@
 import faiss
-import os
 import gradio as gr
+import os
+
 from autogpt_config import AutoGptConfig
-from langchain.utilities import SerpAPIWrapper
 from langchain.agents import Tool
+from langchain.chat_models import ChatOpenAI
+from langchain.docstore import InMemoryDocstore
+from langchain.embeddings import OpenAIEmbeddings
 from langchain.tools.file_management.write import WriteFileTool
 from langchain.tools.file_management.read import ReadFileTool
-from langchain.embeddings import OpenAIEmbeddings
+from langchain.utilities import SerpAPIWrapper
 from langchain.vectorstores import FAISS
-from langchain.docstore import InMemoryDocstore
 from langchain_experimental.autonomous_agents import AutoGPT
-from langchain.chat_models import ChatOpenAI
 from utils import ArgumentParser, LOG
-from flask import Flask, jsonify, request
 
 def initialize_autogpt():
     SERPAPI_API_KEY = config.SERPAPI_API_KEY
@@ -40,7 +40,7 @@ def initialize_autogpt():
 
     # Initialize AutoGPT agent
     agent = AutoGPT.from_llm_and_tools(
-        ai_name="Yang",
+        ai_name="AI",
         ai_role="Assistant",
         tools=tools,
         llm=ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY),
@@ -52,7 +52,8 @@ def initialize_autogpt():
     return agent
 
 def qa(query, agent):
-    return agent.run([query])
+    response = agent.run([query])
+    return response
 
 if __name__ == "__main__":
     # 解析命令行

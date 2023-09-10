@@ -1,0 +1,10 @@
+Weather Report for San Francisco
+
+Date: Saturday
+Temperature: 68°F
+Weather: Partly cloudy
+Precipitation: 0%
+Humidity: 73%
+Wind: 16 mph
+
+Have a great day in San Francisco!
