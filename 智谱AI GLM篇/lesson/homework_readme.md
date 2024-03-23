@@ -18,6 +18,9 @@ image_prompt = 油画。分析文本后，未直接提供人物外貌描写。�
 
 油画。分析文本后，未直接提供人物外貌描写。根据“大熊猫”这一线索，推测人物为一只成年雌性大熊猫。 它体型圆润，黑白相间的毛发柔软亮泽。圆脸庞上，漆黑的小眼睛闪烁着温和的光芒，嘴角上扬，露出温柔的微笑。四肢短而粗壮，手持几根新鲜的竹笋，憨态可掬。
 
+代码link: https://github.com/sycao5/openai-quickstart/blob/zhipuhomework/%E6%99%BA%E8%B0%B1AI%20GLM%E7%AF%87/lesson/characterglm_api_demo_streamlit.py
+
+
 
 ![风格选项](增加风格选项.png)
 
@@ -32,7 +35,7 @@ image_prompt = 油画。分析文本后，未直接提供人物外貌描写。�
 - 将生成的对话数据保存到文件中。
 - 设计图形界面，通过点击图形界面上的按钮执行对话数据生成，并展示对话数据。
 
-代码Link: 
+代码Link: https://github.com/sycao5/openai-quickstart/blob/zhipuhomework/%E6%99%BA%E8%B0%B1AI%20GLM%E7%AF%87/lesson/characterglm_role_play_streamlit.py
 
 ![聊天机器人角色生成](聊天机器人角色生成.png)
 
